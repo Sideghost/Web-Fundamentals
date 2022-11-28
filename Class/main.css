@@ -70,3 +70,22 @@ nav a:hover{
 .gallery img:hover{
     transform: scale(1.2);
 }
+
+.filters{
+    display: flex;
+    justify-content: center;
+}
+
+.filters div{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.filters div:hover{
+    font-weight: bold;
+}
+
+.selected{
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -6,6 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src='main.js'></script>
 </head>
 <body>
@@ -16,13 +17,19 @@
         <a href="gallery.html">Gallery</a>
     </nav>
 
+    <div class="filters">
+        <div class="selected" onclick="selectFilter(this);">All</div>
+        <div onclick="selectFilter(this);">Brown</div>
+        <div onclick="selectFilter(this);">Gray</div>
+    </div>
+
     <div class="gallery">
-        <img src="images/1.png" alt="Cat 1"/>
-        <img src="images/2.png" alt="Cat 2"/>
-        <img src="images/3.png" alt="Cat 3"/>
-        <img src="images/4.png" alt="Cat 4"/>
-        <img src="images/5.png" alt="Cat 5"/>
-        <img src="images/6.png" alt="Cat 6"/>
+        <img src="images/1.png" alt="Cat 1" class="All Gray"/>
+        <img src="images/2.png" alt="Cat 2" class="All Brown"/>
+        <img src="images/3.png" alt="Cat 3" class="All Gray"/>
+        <img src="images/4.png" alt="Cat 4" class="All Gray"/>
+        <img src="images/5.png" alt="Cat 5" class="All Gray"/>
+        <img src="images/6.png" alt="Cat 6" class="All Brown"/>
     </div>
 </body>
 </html>
