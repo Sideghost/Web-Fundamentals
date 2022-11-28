@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #eee;
+}
+
+h1 {
+    background-color: #666;
+    color: #eee;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eee;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav a:hover{
+    background-color: #666;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h2 {
+    margin: 40px;
+}
+
+.content p{
+    margin: 20px;
+}
+
+.content button{
+    background-color: #333;
+    color: #eee;
+    padding: 20px;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: #666;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery img{
+    /*display: block;*/
+    height: 300px;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.gallery img:hover{
+    transform: scale(1.2);
+}
