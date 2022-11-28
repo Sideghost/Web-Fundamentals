@@ -1,0 +1,33 @@
+/*defauld values for all pages*/
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+
+/*navegation menu*/
+nav {
+    background-color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: gray;
+}

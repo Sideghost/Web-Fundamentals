@@ -1,0 +1,43 @@
+@import url(main.css);
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*
+div.gallery{
+    border: 1px solid gray;
+}
+*/
+
+.gallery img {
+    /*display: block;*/
+    height: 300px;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.gallery img:hover{
+    transform: scale(1.2);
+    /*border: 1px solid black;*/
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+}
+
+.filters div{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.filters div:hover{
+    font-weight: bold;
+}
+
+.selected{
+    font-weight: bold;
+    text-decoration: underline;
+}

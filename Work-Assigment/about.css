@@ -1,0 +1,97 @@
+@import url("main.css");
+
+.requirements {
+    margin: 20px 0px 20px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.about_content {
+    margin: 20px;
+}
+
+/* table in about */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+}
+
+th {
+    background-color: lightgray;
+}
+
+tr, td {
+    border-bottom: 1px solid gray;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    /*box-align: center;*/
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: relative;
+    align-self: center;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.center {
+    text-align: center;
+}
+
+.list_and_headline {
+    margin-top: 20px;
+}
+
+.list {
+    margin-top: 10px;
+}

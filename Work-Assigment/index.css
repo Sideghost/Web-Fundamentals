@@ -1,0 +1,26 @@
+@import url("main.css");
+
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    margin: 40px;
+}
+
+.content p {
+    margin: 20px;
+}
+
+.content button {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: gray;
+}
