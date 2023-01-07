@@ -1,4 +1,3 @@
-@import url("main.css");
 
 .requirements {
     margin: 20px 0px 20px 0px;
@@ -10,78 +9,85 @@
     margin: 20px;
 }
 
-/* table in about */
-.table {
+table {
+    /* Add some space around the table */
+    margin: 20px;
+  
+    /* Change the color of the table border */
+    border: 1px solid #333;
+  
+    /* Add some rounded corners to the table */
+    border-radius: 5px;
+  
     border-collapse: collapse;
-    width: 100%;
+    /* Change the font of the table text */
+    /*font-family: Arial, sans-serif;*/
+    /*font-size: 14px;*/
+}
+  
+th {
+    /* Change the background color of the table headings */
+    background-color: #333;
+    color: #fff;
+    border: 1px solid black;
+  
+    /* Add some padding to the table headings */
     padding: 10px;
 }
-
-th {
+  
+td {
+    /* Add some padding to the table cells */
+    padding: 10px;
+  
+    /* Change the text color of the table cells */
+    color: #333;
+  
+    /* Add a border to the right of each table cell */
+    border: 1px solid #333;
+}
+  
+td.center {
+    padding: 5px;
+}
+/*
+.progress-bar {
+    width: 100%;
+    height: 20px;
     background-color: lightgray;
+    border-radius: 10px;
 }
-
-tr, td {
-    border-bottom: 1px solid gray;
+  
+.progress-bar::-webkit-progress-bar {
+    background-color: lightgray;
+    border-radius: 10px;
 }
-
-/* Customize the label (the container) */
-.container {
-    display: block;
-    position: relative;
-    /*box-align: center;*/
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  
+.progress-bar::-webkit-progress-value {
+    background-color: blue;
+    border-radius: 10px;
 }
-
-/* Hide the browser's default checkbox */
-.container input {
-    position: relative;
-    align-self: center;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
+*/
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.progress {
     width: 0;
+    height: 100%;
+    background-color: #4caf50;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-right: 5px;
 }
 
 .center {

@@ -1,15 +1,9 @@
-@import url(main.css);
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     justify-content: space-around;
 }
-/*
-div.gallery{
-    border: 1px solid gray;
-}
-*/
 
 .gallery img {
     /*display: block;*/
@@ -20,7 +14,6 @@ div.gallery{
 
 .gallery img:hover{
     transform: scale(1.2);
-    /*border: 1px solid black;*/
 }
 
 .filters{

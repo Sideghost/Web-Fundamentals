@@ -5,29 +5,92 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: white;
+    background-color: #FFDD83;
     margin: 0px;
 }
 
 h1 {
     text-align: center;
-    background-color: gray;
-    color: white;
+    background-color: #31BCCC;
+    color: black;
     padding: 10px;
 }
 
 /*navegation menu*/
 nav {
-    background-color: black;
+    background-color: #405983;
+    text-align: center;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 10px;
     display: inline-block;
 }
 
 nav a:hover {
-    background-color: gray;
+    background-color: #355791;
+}
+
+/*footer*/
+footer {
+    background-color: #31BCCC;
+    color: white;
+    padding: 30px 0;
+}
+  
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+  
+.footer-container a {
+    color: white;
+    text-decoration: none;
+}
+    
+.footer-container a:hover {
+    color: #333;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
 }
