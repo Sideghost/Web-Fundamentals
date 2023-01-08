@@ -10,19 +10,14 @@
 }
 
 table {
-    /* Add some space around the table */
-    margin: 20px;
-  
+    margin: auto;
     /* Change the color of the table border */
     border: 1px solid #333;
   
     /* Add some rounded corners to the table */
     border-radius: 5px;
-  
     border-collapse: collapse;
-    /* Change the font of the table text */
-    /*font-family: Arial, sans-serif;*/
-    /*font-size: 14px;*/
+    
 }
   
 th {
@@ -68,6 +63,7 @@ td.center {
 }
 */
 .progress-container {
+    margin-top: 20px;
     width: 100%;
     height: 20px;
     background-color: #ddd;

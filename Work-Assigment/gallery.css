@@ -1,36 +1,89 @@
-
-.gallery {
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
+.menu h3 {
+    text-align: center;
+    margin: 20px;
 }
 
-.gallery img {
-    /*display: block;*/
-    height: 300px;
-    transition: transform 0.5s;
+.menu {
+    position: absolute;
+    top: 140px; /* adjust this value to position the menu below the nav bar */
+    left: 0;
+    width: 200px; /* adjust this value to set the width of the menu */
+    background-color: rgba(255, 255, 255, 0.685);
+    overflow: auto;
+    /*height: calc(100% - 140px);*/ /* adjust this value to set the height of the menu */
+    z-index: 1;
+    box-shadow: 2px 0px 2px rgba(0,0,0,0.1); /* add a box shadow to the menu */
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* align elements to the right */
+}
+  
+.search-container input[type=text] {
+    width: 130px;
+    padding: 6px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+}
+  
+.search-container button {
+    padding: 6px 10px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
     cursor: pointer;
 }
-
-.gallery img:hover{
-    transform: scale(1.2);
+  
+.search-container button:hover {
+    background: #ccc;
 }
+  
+.search-container .fa-search {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -6px;
+  }
 
-.filters{
-    display: flex;
-    justify-content: center;
-}
-
-.filters div{
+.menu div{
     padding: 20px;
     cursor: pointer;
 }
 
-.filters div:hover{
+.menu div:hover{
     font-weight: bold;
 }
 
 .selected{
     font-weight: bold;
     text-decoration: underline;
+}
+
+.gallery {
+    left: 200px;
+    width: calc(100% - 200px - 20px); /* set the width instead of the right property */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 20px;  /* add some margin to give the elements some space between each other */
+}
+
+.gallery img {
+    height: 300px;
+    margin: 20px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    border: 1px solid black; /* set the border width to 3 pixels */
+    background-color: rgba(255, 255, 255, 0.685);
+    box-shadow: 5px black;
+    border-radius: 10px;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
 }
