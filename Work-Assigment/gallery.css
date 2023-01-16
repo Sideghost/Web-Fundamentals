@@ -1,24 +1,30 @@
+/* so menu doesnt overlap gallery in smaller devices */
+body {
+    min-width: 600px;
+}
+
 .menu h3 {
     text-align: center;
     margin: 20px;
 }
 
+.gallery-container{    
+    display: flex;
+}
+
 .menu {
-    position: absolute;
-    top: 140px; /* adjust this value to position the menu below the nav bar */
-    left: 0;
-    width: 200px; /* adjust this value to set the width of the menu */
+    width: 200px;
+    max-height: 790px; 
     background-color: rgba(255, 255, 255, 0.685);
-    overflow: auto;
-    /*height: calc(100% - 140px);*/ /* adjust this value to set the height of the menu */
+    overflow: auto; 
     z-index: 1;
-    box-shadow: 2px 0px 2px rgba(0,0,0,0.1); /* add a box shadow to the menu */
+    box-shadow: 2px 0px 2px rgba(0,0,0,0.1);
 }
 
 .search-container {
     position: relative;
     display: flex;
-    justify-content: flex-end; /* align elements to the right */
+    justify-content: flex-end;
 }
   
 .search-container input[type=text] {
@@ -64,18 +70,18 @@
 }
 
 .gallery {
-    left: 200px;
-    width: calc(100% - 200px - 20px); /* set the width instead of the right property */
-    position: relative;
+    width: calc(100% - 200px - 20px);
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
-    margin: 20px;  /* add some margin to give the elements some space between each other */
+    justify-content:space-evenly;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .gallery img {
     height: 300px;
-    margin: 20px;
+    width: 300px;
+    margin: 10px;
     transition: transform 0.5s;
     cursor: pointer;
     border: 1px solid black; /* set the border width to 3 pixels */
