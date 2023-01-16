@@ -3,7 +3,7 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-		<title>Page Title</title>
+		<title>Gallery Page</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 		<link rel='stylesheet' type='text/css' media='screen' href='about.css'>
@@ -11,140 +11,130 @@
 		<script src='about.js'></script>
 	</head>
 <body>
-	<h1>My Gallery!</h1>
-	<nav>
-		<a href = "home.html">Home</a>
-		<a href = "about.html">About</a>
-		<a href = "gallery.html">Gallery</a>
-	</nav>
-	<div class = "about_content">
-		<h2 class = "requirements">Work assigment requirements and levels</h2>
-		<table class="table">
-			<thead>
-			  	<tr>
-					<th>Progress</th>
-					<th>Task numbers</th>
-					<th></th>
-			  	</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="center">
-						<input type="checkbox" data-value="20" id="task1">
-						<label for="task1">10 Pts</label>
-					</td>
-					<td class="center">Task 1</td>
-					<td>Create all the HTML files. Be creative, choose the right HTML elements, their positioning and sizes.</td>
-				</tr>
-			<tr>
-				<td class = "center">
-					<input type="checkbox" data-value="30" id="task2">
-					<label for="task2">15 Pts</label>
-				</td>
-				<td class ="center">Task 2</td>
-				<td>Write CSS code for your website. Design a modern, user friendly website. Be creative, try CSS flexbox or grid for displaying the images.</td>
-			</tr>
-			<tr>
-				<td class = "center">
-					<input type="checkbox" data-value="10" id="task3">
-					<label for="task3">05 Pts</label>
-				</td>
-				<td class ="center">Task 3</td>
-				<td>Upgrade your CSS to create a responsive design. Make your website user friendly on mobile devices. Example: responsive menu.</td>
-			</tr>
-			<tr>
-				<td class = "center">
-					<input type="checkbox" data-value="40" id="task4">
-					<label for="task4">20 Pts</label>
-				</td>
-				<td class ="center">Task 4</td>
-				<td>
-					Using Javascript, add two dynamic features (10 points each) to your website. You are encouraged to suggest your own dynamic features, or you can choose from the list below:
-					<ul class = "list">
-						<li>Filter images by tags</li>
-						<li>Add a shopping cart for purchase</li>
-						<li>Display selected images as slideshow</li>
-					</ul>
-				</td>
-			</tr>
-		</table>
-		<div class="progress-container">
-			<div class="progress"></div>
+	<div class="main-content">
+		<div class="head-of-page">
+			<h1>My Gallery!</h1>
+			<nav>
+				<a href = "home.html">Home</a>
+				<a href = "about.html">About</a>
+				<a href = "gallery.html">Gallery</a>
+			</nav>
 		</div>
-		<script>
-			const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-			checkboxes.forEach((checkbox) => {
-				checkbox.addEventListener('change', () => {
-					updateProgressBar();
-				});
-			});
-
-			function updateProgressBar() {
-				// get all the checkboxes
-				const checkboxes = document.querySelectorAll('table input[type="checkbox"]');
-				let totalValue = 0;
-
-				// iterate over the checkboxes and add their values if they are checked
+		<div class = "about_content">
+			<h2 class = "requirements">Work assigment requirements and levels</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Progress</th>
+						<th>Task numbers</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="center">
+							<input type="checkbox" data-value="20" id="task1">
+							<label for="task1">10 Pts</label>
+						</td>
+						<td class="center">Task 1</td>
+						<td>Create all the HTML files. Be creative, choose the right HTML elements, their positioning and sizes.</td>
+					</tr>
+				<tr>
+					<td class = "center">
+						<input type="checkbox" data-value="30" id="task2">
+						<label for="task2">15 Pts</label>
+					</td>
+					<td class ="center">Task 2</td>
+					<td>Write CSS code for your website. Design a modern, user friendly website. Be creative, try CSS flexbox or grid for displaying the images.</td>
+				</tr>
+				<tr>
+					<td class = "center">
+						<input type="checkbox" data-value="10" id="task3">
+						<label for="task3">05 Pts</label>
+					</td>
+					<td class ="center">Task 3</td>
+					<td>Upgrade your CSS to create a responsive design. Make your website user friendly on mobile devices. Example: responsive menu.</td>
+				</tr>
+				<tr>
+					<td class = "center">
+						<input type="checkbox" data-value="40" id="task4">
+						<label for="task4">20 Pts</label>
+					</td>
+					<td class ="center">Task 4</td>
+					<td>
+						Using Javascript, add two dynamic features (10 points each) to your website. You are encouraged to suggest your own dynamic features, or you can choose from the list below:
+						<ul class = "list">
+							<li>Filter images by tags</li>
+							<li>Add a shopping cart for purchase</li>
+							<li>Display selected images as slideshow</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<div class="progress-container">
+				<div class="progress"></div>
+			</div>
+			<script>
+				const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 				checkboxes.forEach((checkbox) => {
-					if (checkbox.checked) {
-						totalValue += Number(checkbox.dataset.value);
-					}
+					checkbox.addEventListener('change', () => {
+						updateProgressBar();
+					});
 				});
 
-				// set the width of the progress bar based on the sum of the values
-				document.querySelector('.progress').style.width = `${totalValue}%`;
-			}
+				function updateProgressBar() {
+					// get all the checkboxes
+					const checkboxes = document.querySelectorAll('table input[type="checkbox"]');
+					let totalValue = 0;
 
-			window.onload = () => {
-				updateProgressBar();
-			}
-		</script>
-		<!--progress value="0" max="100" class="progress-bar"></progress-->
-		<div class="list_and_headline">
-			<h2>My design ideas</h2>
-			<ul class="list">
-				<li>Fotter on everypage: (done)</li>
-					<ul>
-						<li>My name</li>
-						<li>github link</li>
-						<li>linkedin link</li>
-					</ul>
-				<li>search bar (yes)</li>
-				<li>shopping cart (no)</li>
-				<li><a href="https://colorhunt.co/collection">color patele</a></li>
-				<li>Home page: (done)</li>
-					<ul>
-						<li>welcome</li>
-						<li><a href="https://www.youtube.com/watch?v=0wvrlOyGlq0&t=634s&ab_channel=CodingSnow">slideshow</a></li>
-						<li>message</li>
-						<li>Button</li>
-						<li>BUGS:</li>
+					// iterate over the checkboxes and add their values if they are checked
+					checkboxes.forEach((checkbox) => {
+						if (checkbox.checked) {
+							totalValue += Number(checkbox.dataset.value);
+						}
+					});
+
+					// set the width of the progress bar based on the sum of the values
+					document.querySelector('.progress').style.width = `${totalValue}%`;
+				}
+
+				window.onload = () => {
+					updateProgressBar();
+				}
+			</script>
+			<div class="list_and_headline">
+				<h2>My design ideas</h2>
+				<ul class="list">
+					<li>Fotter on everypage: (done)</li>
 						<ul>
-							<li>footer not being ancored to the end of the page</li>
+							<li>My name</li>
+							<li>github link</li>
+							<li>linkedin link</li>
 						</ul>
-					</ul>
-				<li>About Page: (done) </li>
-					<ul>
-						<li>work assigment table</li>
-						<li>List for task 4 plus a check on the implemented</li>
-						<li>progress bar</li>
-						<li>Grade easter egg</li>
-						<li>BUGS:</li>
+					<li>search bar (yes)</li>
+					<li>shopping cart (no)</li>
+					<li><a href="https://colorhunt.co/collection">color patele</a></li>
+					<li>Home page: (done)</li>
 						<ul>
-							<li>Progress bar not having the same with has the table</li>
-							<li>footer not being ancored to the end of the page</li>
+							<li>welcome</li>
+							<li><a href="https://www.youtube.com/watch?v=0wvrlOyGlq0&t=634s&ab_channel=CodingSnow">slideshow</a></li>
+							<li>message</li>
+							<li>Button</li>
 						</ul>
-					</ul>
-				<li>Gallery Page: (done)</li>
-					<ul>
-						<li>Filter menu on the left</li>
-						<li>itens just like in amazon page</li>
-						<li>BUGS:</li>
+					<li>About Page: (done) </li>
 						<ul>
-							<li>footer being overlaped with filter menu</li>
+							<li>work assigment table</li>
+							<li>List for task 4 plus a check on the implemented</li>
+							<li>progress bar</li>
+							<li>Grade easter egg</li>
 						</ul>
-					</ul>
-			</ul>
+					<li>Gallery Page: (done)</li>
+						<ul>
+							<li>Filter menu on the left</li>
+							<li>itens just like in amazon page</li>
+						</ul>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<footer>

@@ -6,8 +6,17 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #FFDD83;
-    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
 }
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 
 h1 {
     text-align: center;
@@ -35,6 +44,8 @@ nav a:hover {
 
 /*footer*/
 footer {
+    position: relative;
+    bottom: 0;
     background-color: #31BCCC;
     color: white;
     padding: 30px;
@@ -45,7 +56,6 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 .footer-section {

@@ -10,7 +10,6 @@
 }
 
 table {
-    margin: auto;
     /* Change the color of the table border */
     border: 1px solid #333;
   
@@ -44,27 +43,11 @@ td {
 td.center {
     padding: 5px;
 }
-/*
-.progress-bar {
-    width: 100%;
-    height: 20px;
-    background-color: lightgray;
-    border-radius: 10px;
-}
-  
-.progress-bar::-webkit-progress-bar {
-    background-color: lightgray;
-    border-radius: 10px;
-}
-  
-.progress-bar::-webkit-progress-value {
-    background-color: blue;
-    border-radius: 10px;
-}
-*/
+
 .progress-container {
     margin-top: 20px;
     width: 100%;
+    max-width: 1695px;
     height: 20px;
     background-color: #ddd;
     border-radius: 10px;
